@@ -37,6 +37,11 @@ export default function Home() {
             description="Find License Plate Combos to Win Bingo!"
             href="/games/license-plate-bingo"
           />
+          <GameCard
+            title="🤔 Would You Rather?"
+            description="Guess your friends Would you Rather!"
+            href="/games/would-you-rather"
+          />
         </div>
       </PageWrapper>
     </div>
