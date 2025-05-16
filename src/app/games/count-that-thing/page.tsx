@@ -27,7 +27,7 @@ const THINGS = [
 export default function CountThatThing() {
     const [counts, setCounts] = useLocalState<Record<string, number>>(
         "count-that-thing",
-        () => Object.fromEntries(THINGS.map((t) => [t, 0]))
+        Object.fromEntries(THINGS.map((t) => [t, 0]))
     );
 
     const increment = (thing: string) => {

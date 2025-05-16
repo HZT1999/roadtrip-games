@@ -27,11 +27,10 @@ const SIGNS = [
 ];
 
 export default function RoadSignHunt() {
-    const [seen, setSeen] = useLocalState<Record<string, boolean>>("road-sign-hunt-seen", () => {
-        const initial: Record<string, boolean> = {};
-        SIGNS.forEach(sign => (initial[sign] = false));
-        return initial;
-    });
+    const [seen, setSeen] = useLocalState<Record<string, boolean>>(
+        "road-sign-hunt-seen",
+        Object.fromEntries(SIGNS.map((sign) => [sign, false]))
+    );
 
     const toggleSeen = (sign: string) => {
         setSeen((prev) => ({ ...prev, [sign]: !prev[sign] }));
