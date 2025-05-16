@@ -38,9 +38,14 @@ export default function Home() {
             href="/games/license-plate-bingo"
           />
           <GameCard
-            title="🤔 Would You Rather?"
+            title="🤔 Would You Rather"
             description="Guess your friends Would you Rather!"
             href="/games/would-you-rather"
+          />
+          <GameCard
+            title="⚡ Category Blitz"
+            description="Fire rounds of words to letters!"
+            href="/games/category-blitz"
           />
         </div>
       </PageWrapper>
