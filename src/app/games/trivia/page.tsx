@@ -42,6 +42,8 @@ export default function TriviaPage() {
 
     const loadQuestion = async () => {
         setLoading(true);
+
+        await new Promise((resolve) => setTimeout(resolve, 2000));
         const { question, source } = await getTriviaQuestion(category);
         setQuestion(question);
         setSelected(null);
@@ -106,6 +108,7 @@ export default function TriviaPage() {
                     className="w-full p-2 rounded-lg border dark:bg-gray-800"
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
+                    disabled={loading}
                 >
                     {categories.map((cat) => (
                         <option key={cat.id} value={cat.id}>
@@ -118,6 +121,7 @@ export default function TriviaPage() {
             <div className="text-center mb-4 text-sm text-text-muted">
                 👌Correct: {score.correct} | 🔥 Streak: {score.streak}
             </div>
+
 
             <div className="relative h-2 w-full bg-gray-300 dark:bg-gray-700 rounded overflow-hidden mb-4">
                 <div
@@ -132,7 +136,23 @@ export default function TriviaPage() {
                     style={{ width: `${(timeLeft / 30) * 100}%` }}
                 />
             </div>
-            {question && (
+
+            {!question && !loading && (
+                <div className="text-center mt-6">
+                    <Button onClick={loadQuestion}>
+                        Start Trivia
+                    </Button>
+                </div>
+            )}
+
+            {loading && (
+                <div className="text-center mt-6">
+                    <div className="w-6 h-6 border-4 border-brand border-t-transparent rounded-full animate-spin mx-auto" />
+                    <p className="text-sm text-text-muted mt-2">Fetching question...</p>
+                </div>
+            )}
+
+            {!loading && question && (
                 <div className="space-y-4">
                     <p className="font-semibold text-lg">{question.question}</p>
                     <div className="grid gap-2">
