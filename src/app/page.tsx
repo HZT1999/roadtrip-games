@@ -32,6 +32,11 @@ export default function Home() {
             description="Find words A to Z on signs, plates, or anything outside."
             href="/games/alphabet-hunt"
           />
+          <GameCard
+            title="🚘 License Plate Bingo"
+            description="Find License Plate Combos to Win Bingo!"
+            href="/games/license-plate-bingo"
+          />
         </div>
       </PageWrapper>
     </div>

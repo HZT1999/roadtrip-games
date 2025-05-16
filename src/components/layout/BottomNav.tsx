@@ -6,9 +6,9 @@ import clsx from "clsx";
 
 const navItems = [
     { label: "Home", href: "/", icon: "🏡" },
-    { label: "Car Cricket", href: "/games/car-cricket", icon: "🏏" },
-    { label: "Trivia", href: "/games/trivia", icon: "🧠" },
-    { label: "Alphabet Hunt", href: "/games/alphabet-hunt", icon: "🔡" },
+    // { label: "Car Cricket", href: "/games/car-cricket", icon: "🏏" },
+    // { label: "Trivia", href: "/games/trivia", icon: "🧠" },
+    // { label: "Alphabet Hunt", href: "/games/alphabet-hunt", icon: "🔡" },
     { label: "Settings", href: "/settings", icon: "⚙️" },
 ];
 
