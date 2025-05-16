@@ -47,6 +47,11 @@ export default function Home() {
             description="Fire rounds of words to letters!"
             href="/games/category-blitz"
           />
+          <GameCard
+            title="🛑 Road Sign Hunt"
+            description="Tap each road sign when you spot it!"
+            href="/games/road-sign-hunt"
+          />
         </div>
       </PageWrapper>
     </div>
