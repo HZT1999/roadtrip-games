@@ -44,7 +44,7 @@ export default function TriviaPage() {
         setLoading(true);
 
         await new Promise((resolve) => setTimeout(resolve, 2000));
-        const { question, source } = await getTriviaQuestion(category);
+        const { question, source } = await getTriviaQuestion(category?.toString());
         setQuestion(question);
         setSelected(null);
         setFeedback(null);
@@ -107,7 +107,7 @@ export default function TriviaPage() {
                     id="category"
                     className="w-full p-2 rounded-lg border dark:bg-gray-800"
                     value={category}
-                    onChange={(e) => setCategory(e.target.value)}
+                    onChange={(e) => setCategory(Number(e.target.value))}
                     disabled={loading}
                 >
                     {categories.map((cat) => (
