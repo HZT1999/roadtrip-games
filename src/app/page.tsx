@@ -52,6 +52,11 @@ export default function Home() {
             description="Tap each road sign when you spot it!"
             href="/games/road-sign-hunt"
           />
+          <GameCard
+            title="🔢 Count That Thing!"
+            description="Compete or collaborate to count as many things as you can!"
+            href="/games/count-that-thing"
+          />
         </div>
       </PageWrapper>
     </div>
